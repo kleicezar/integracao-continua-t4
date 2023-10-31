@@ -1,0 +1,29 @@
+name: CI Back-End Branches
+on: 
+  push:
+    brances:
+      - '**'
+      - '!main'
+    paths:
+      - 'sgcmapi/**' # * significa todos os diretorios, ** sao todos os diretorios e sub-diretorios
+  
+permisions:
+  contents: write
+
+jobs:
+  main:
+    name: CI Workflow Main
+    uses:./.github/workflows/ci-backend.yml
+  
+  merge:
+    needs: main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Merge Branch
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: main
+          github_token: ${{ github.token}}
