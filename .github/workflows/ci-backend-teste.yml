@@ -2,7 +2,7 @@ name: CI Back-End teste
 on: 
   push:
     brances:
-      - '!main'
+      - 'main'
     paths:
       - 'sgcmapi/**' # * significa todos os diretorios, ** sao todos os diretorios e sub-diretorios
   workflow_dispatch:
