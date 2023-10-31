@@ -16,7 +16,7 @@ jobs:
     name: CI Workflow test
     uses: ./.github/workflows/ci-backend.yml
   build:
-  needs: test
+    needs: test
     runs-on: ubuntu-latest 
     steps:
       - name: Checkout
