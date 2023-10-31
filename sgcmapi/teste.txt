@@ -1,4 +1,4 @@
 teste
-git add 
+git ad
 push
 pull request
