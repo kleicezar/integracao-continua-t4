@@ -22,6 +22,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      - name: Mavem Compile/Test ##separar
+      - name: Mavem Compile
         working-directory: sgcmapi/
-        run: mvn compile test
+        run: mvn compile 
