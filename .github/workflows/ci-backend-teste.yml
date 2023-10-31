@@ -2,7 +2,7 @@ name: CI Back-End teste
 on: 
   push:
     brances:
-      - 'main'
+      - '!main'
     paths:
       - 'sgcmapi/**' # * significa todos os diretorios, ** sao todos os diretorios e sub-diretorios
   workflow_dispatch:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   test:
-    name: CI Workflow main
+    name: CI Workflow test
     uses:./.github/workflows/ci-backend.yml
   build:
   needs: test
