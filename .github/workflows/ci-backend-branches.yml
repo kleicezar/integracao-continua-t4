@@ -16,7 +16,7 @@ jobs:
     uses:./.github/workflows/ci-backend-test.yml
   
   merge:
-    needs: test
+    needs: main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

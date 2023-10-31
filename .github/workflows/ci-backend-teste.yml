@@ -12,11 +12,11 @@ on:
   workflow_call:
 
 jobs:
-  main:
+  test:
     name: CI Workflow main
     uses:./.github/workflows/ci-backend.yml
   build:
-  needs: main
+  needs: test
     runs-on: ubuntu-latest 
     steps:
       - name: Checkout
