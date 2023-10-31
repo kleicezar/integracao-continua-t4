@@ -5,6 +5,11 @@ on:
       - 'main'
     paths:
       - 'sgcmapi/**' # * significa todos os diretorios, ** sao todos os diretorios e sub-diretorios
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'sgcmapi/**'
+      
 jobs:
   primeiro-job:
     runs-on: ubuntu-latest
