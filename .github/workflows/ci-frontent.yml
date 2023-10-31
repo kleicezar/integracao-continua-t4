@@ -25,10 +25,10 @@ jobs:
       - name: Cliente Angular
         run: npm install -g @angular/cli@16
       - name: Instalação de Dependencias
-        working-diretory: sgcmapp/
+        working-directory: sgcmapp/
         run: npm install
       - name : Build
-        working-diretory: sgcmapp/
+        working-directory: sgcmapp/
         run: ng build
   test:
     runs-on: ubuntu-latest
@@ -41,11 +41,11 @@ jobs:
       - name: Cliente Angular
         run: npm install -g @angular/cli@16
       - name: Instalação de Dependencias
-        working-diretory: sgcmapp/
+        working-directory: sgcmapp/
         run: npm install
       - name : Build
-        working-diretory: sgcmapp/
+        working-directory: sgcmapp/
         run: ng build
       - name: Test
-        working-diretory: sgcmapp/
+        working-directory: sgcmapp/
         run: ng test --no-watch --no-progress --browsers=ChromeHeadless
