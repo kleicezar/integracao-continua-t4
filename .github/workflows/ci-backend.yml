@@ -1,4 +1,4 @@
-name: CI Back-End
+name: CI Back-End Compile
 on: 
   push:
     brances:
