@@ -7,7 +7,7 @@ on:
     paths:
       - 'sgcmapi/**' # * significa todos os diretorios, ** sao todos os diretorios e sub-diretorios
   
-permisions:
+permissions:
   contents: write
 
 jobs:
