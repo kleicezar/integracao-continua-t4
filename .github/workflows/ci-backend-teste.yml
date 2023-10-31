@@ -14,7 +14,7 @@ on:
 jobs:
   test:
     name: CI Workflow test
-    uses:./.github/workflows/ci-backend.yml
+    uses: ./.github/workflows/ci-backend.yml
   build:
   needs: test
     runs-on: ubuntu-latest 

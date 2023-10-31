@@ -13,7 +13,7 @@ permisions:
 jobs:
   main:
     name: CI Workflow Test
-    uses:./.github/workflows/ci-backend-teste.yml
+    uses: ./.github/workflows/ci-backend-teste.yml
   
   merge:
     needs: main
