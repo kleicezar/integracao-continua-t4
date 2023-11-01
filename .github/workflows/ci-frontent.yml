@@ -50,3 +50,23 @@ jobs:
       - name: Test
         working-directory: sgcmapp/
         run: ng test --no-watch --no-progress --browsers=ChromeHeadless
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Cliente Angular
+        run: npm install -g @angular/cli@16
+      - name: Instalação de Dependencias
+        working-directory: sgcmapp/
+        run: npm install
+      - name : Build
+        working-directory: sgcmapp/
+        run: ng build
+      - name: e2e cypress
+        working-directory: sgcmapp/
+        run: ng run sgcmapp:cypress-run
