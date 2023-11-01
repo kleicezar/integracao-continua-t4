@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: action/checkout@v4
       - name: Deploy
-        uses: Johnbeynon/render-deploy-action@0.0.8 
+        uses: Johnbeynon/render-deploy-action@v0.0.8 
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
           api-key: ${{ secrets.RENDER_API_KEY }}
