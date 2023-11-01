@@ -15,9 +15,7 @@ public class FiltroCors {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowedOrigins(Arrays.asList(
-            "http://127.0.0.1:5500",
-            "http://localhost:4200",
-            "https://localhost:4200"));
+            "https://sgcm-fk06.onrender.com"));
         corsConfig.setAllowedMethods(Arrays.asList("*"));
         corsConfig.setAllowedHeaders(Arrays.asList("*"));
         UrlBasedCorsConfigurationSource configSource = new UrlBasedCorsConfigurationSource();
